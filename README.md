@@ -7,10 +7,10 @@ Mac의 390입력기를 사용해서, karabiner-elements를 이용해 참신세�
 ## 두 가지 파일
 두 종류의 파일이 있습니다.  
 
-390_cham_s.json은 단순히 390입력기 위에 참신세벌식S가 구동되도록 만들어 주는 파일입니다.  
+390_cham_s.json은 단순히 390입력기 위에 참신세벌식S가 구동되도록 만들어 주는 파일입니다.
 karabiner-elements를 통해서 작동하는 것이므로, Mac의 390입력기를 변화시키는 것이 아닙니다!  
 
-390_cham_s_merged.json은 조금 더 복잡한 기능을 구현하기 위해 만들었습니다.  
+390_cham_s_merged.json은 조금 더 복잡한 기능을 구현하기 위해 만들었습니다.
 두 파일을 사용하기 위해 공통적으로, Mac에서 390 기본 입력기를 먼저 추가해 주세요.
 
 ## karabiner complex modifications 설정
@@ -22,8 +22,9 @@ karabiner-elements의 complex modifications를 사용하기 위해서는 사용�
 두벌식과 세벌식390을 동시에 사용할 수 있게끔(자신 또는 다른 사람을 위해) 해주는 역할도 포함합니다.  
 
 이 파일이 제대로 구동되기 위해서는 몇가지 설정이 필요합니다:  
-1. Mac의 설정에서 키보드 단축키 - 입력 소스 - 이전 입력 소스 선택을 F19키로 바꾸어 주세요(이 때, Karabiner를 이용하여 가령, Right Command키를 F19키로 먼저 할당하시고, 이를 이용해서 이전 소스 선택 키 세팅을 하실 수 있습니다).
-2. hammerspoon을 설치해 주세요. brew install hammerspoon을 통해서 쉽게 가능합니다. ~/.hammerspoon/init.lua 파일을 만드시고, require("hs.ipc") 한줄을 적어주세요.
+1. Karabiner를 이용하여 Right Command키를 F19키로 먼저 할당해 주세요.
+2. Mac의 설정에서 키보드 단축키 - 입력 소스 - 이전 입력 소스 선택을 F19키로 바꾸어 주세요(이 때, Right Command 를 이용해서 이전 소스 선택 키 세팅을 하실 수 있습니다).
+3. hammerspoon을 설치해 주세요. 직접 설치하지 마시고, brew를 통해 (brew install hammerspoon) 설치해 주세요. 그 다음, ~/.hammerspoon/init.lua 파일을 만드시고, require("hs.ipc") 한줄을 적어주세요.
 
  ### 390_cham_s_merged.json 파일 사용법
  karabiner-elements를 이용해서 Right Command를 F19로 설정한 후, Mac에서 F19를 이용해서 입력기 변환을 한다고 가정하겠습니다.
