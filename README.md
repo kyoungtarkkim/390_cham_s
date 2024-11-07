@@ -1,8 +1,8 @@
 # 390_cham_s
-Mac의 390입력기를 사용해서, karabiner-elements를 이용해 참신세벌식K를 구현하기 위해 만들었습니다.
+Mac의 390입력기를 사용해서, karabiner-elements를 이용해 참신세벌식S를 구현하기 위해 만들었습니다.
 
-## 참신세벌식S
-참신세벌식S에 대해서는 [https://github.com/kyoungtarkkim/hangul-c3s](https://github.com/kyoungtarkkim/hangul-c3s) 을 참조해 주시기를 바랍니다.
+## 참신세벌식S (S for Semoi)
+참신세벌식S에 대해서는 [https://github.com/kyoungtarkkim/hangul-c3s](https://github.com/kyoungtarkkim/hangul-c3s)을 참조해 주시기를 바랍니다.
 
 ## 두 가지 파일
 두 종류의 파일이 있습니다.  
