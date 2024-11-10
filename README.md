@@ -24,8 +24,18 @@ karabiner-elements의 complex modifications를 사용하기 위해서는 사용�
 이 파일이 제대로 구동되기 위해서는 몇가지 설정이 필요합니다:  
 1. Karabiner를 이용하여 Right Command키를 F19키로 먼저 할당해 주세요.
 2. Mac의 설정에서 키보드 단축키 - 입력 소스 - 이전 입력 소스 선택을 F19키로 바꾸어 주세요(이 때, Right Command 를 이용해서 이전 소스 선택 키 세팅을 하실 수 있습니다).
-3. hammerspoon을 설치해 주세요. 직접 설치하지 마시고, brew를 통해 (brew install hammerspoon) 설치해 주세요. 그 다음, ~/.hammerspoon/init.lua 파일을 만드시고, require("hs.ipc") 한줄을 적어주세요.
-
+3. hammerspoon을 설치해 주세요. 직접 설치하지 마시고, brew를 통해 (brew install hammerspoon) 설치해 주세요:
+  
+```bash
+brew install hammerspoon
+```
+  
+4. 그 다음, ~/.hammerspoon/init.lua 파일을 만드시고, require("hs.ipc") 한줄을 적어주세요:
+  
+```lua
+require("hs.ipc")
+```
+  
  ### 390_cham_s_merged.json 파일 사용법
  karabiner-elements를 이용해서 Right Command를 F19로 설정한 후, Mac에서 F19를 이용해서 입력기 변환을 한다고 가정하겠습니다.
  이 때, Right Option + Right Command 키를 이용해서 두벌식을 사용할 것인지, 세벌식390을 사용할 것인지, 참신세벌식S를 사용할 것인지 선택하실 수 있습니다.
