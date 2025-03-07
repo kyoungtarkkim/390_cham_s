@@ -512,8 +512,6 @@
 
 
 
-
-
 // 동시 치기 comma, period
 
 // simul comma + space = comma + space
@@ -927,30 +925,23 @@
 
 
 
+// galma:1 + cho:unless 0 + mo:unless 0 + end:0 + 1 -> ㅋ(end:111) + galma:0
+{"type":"basic","from":{"key_code":"1"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_unless","name":"cho_state","value":0},{"type":"variable_unless","name":"mo_state","value":0},{"type":"variable_if","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
+// galma:1 + cho:unless 0 + mo:unless 0 + end:0 + 2 -> ㅈ(end:9) + galma:0
+{"type":"basic","from":{"key_code":"2"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_unless","name":"cho_state","value":0},{"type":"variable_unless","name":"mo_state","value":0},{"type":"variable_if","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
-// galma:1 + end:unless 0 + 2 -> 2 + galma:0
-{"type":"basic","from":{"key_code":"2"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"key_code":"comma","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_unless","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + 2 -> ㅈ(end:9) + galma:0
-{"type":"basic","from":{"key_code":"2"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + cho:unless 0 + mo:unless 0 + end:0 + 3 -> ㄷ(end:3) + galma:0
+{"type":"basic","from":{"key_code":"3"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_unless","name":"cho_state","value":0},{"type":"variable_unless","name":"mo_state","value":0},{"type":"variable_if","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
-// galma:1 + end:unless 0 + 3 -> 3 + galma:0
-{"type":"basic","from":{"key_code":"3"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"key_code":"period","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_unless","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + 3 -> ㄷ(end:3) + galma:0
-{"type":"basic","from":{"key_code":"3"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-
-
-
-// galma:1 + end:unless 0 + 4 -> 4 + galma:0
-{"type":"basic","from":{"key_code":"4"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"key_code":"j","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_unless","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + 4 -> ㅍ(end:666) + galma:0
-{"type":"basic","from":{"key_code":"4"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":666}},{"key_code":"q","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + cho:unless 0 + mo:unless 0 + end:0 + 4 -> ㅍ(end:666) + galma:0
+{"type":"basic","from":{"key_code":"4"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"end_state","value":666}},{"key_code":"q","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_unless","name":"cho_state","value":0},{"type":"variable_unless","name":"mo_state","value":0},{"type":"variable_if","name":"end_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
@@ -1142,12 +1133,12 @@
 {"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":2}},{"key_code":"s"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":44},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅠ(mo:8) + f -> ㅁ(end:5)
 {"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":5}},{"key_code":"z"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":8},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + ㅡ(mo:9) + f -> ㄱ(end:1)
-{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":1}},{"key_code":"x"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + ㅒ(mo:14) + f -> ㄹ(end:4)
-{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":4}},{"key_code":"w"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":14},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + ㅖ(mo:13) + f -> ㅆ(end:77)
-{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":77}},{"key_code":"2"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":13},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅡ(mo:9) + f -> ㅇ(end:8)
+{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":8}},{"key_code":"a"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅒ(mo:14) + f -> ㄴ(end:2)
+{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":2}},{"key_code":"s"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":14},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅖ(mo:13) + f -> ㅁ(end:5)
+{"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":5}},{"key_code":"z"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":13},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅓ(mo:3) + f -> ㅋ(end:111)
 {"type":"basic","from":{"key_code":"f"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":3},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅑ(mo:2) + f -> ㅌ(end:333)
@@ -1165,8 +1156,30 @@
 
 
 
+// galma:1 + ㅣ(mo:10) + g -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":10},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅚ(mo:221) + g -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":221},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅟ(mo:331) + g -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":331},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅐ(mo:12) + g -> ㅈ(end:9)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":12},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅙ(mo:223) + g -> ㅈ(end:9)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":223},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅛ(mo:6) + g -> ㅋ(end:111)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":6},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅔ(mo:11) + g -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":11},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅞ(mo:333) + g -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":333},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅢ(mo:44) + g -> ㅈ(end:9)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":44},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅠ(mo:8) + g -> ㅋ(end:111)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":8},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅑ(mo:2) + g -> ㅊ(end:999)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":999}},{"key_code":"z","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":2},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + g -> ㅋ(end:111)
-{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// {"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // cho:0 + g -> ㅗ(mo:22)
 {"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"mo_state","value":22}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"v"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"cho_state","value":0},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // g -> ㅗ(mo:5) + galma:1
@@ -1229,12 +1242,12 @@
 
 
 
-// galma:1 + ㅡ(mo:9) + v -> ㅇ(end:8)
-{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":8}},{"key_code":"a"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + ㅒ(mo:14) + v -> ㄴ(end:2)
-{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":2}},{"key_code":"s"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":14},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// galma:1 + ㅖ(mo:13) + v -> ㅁ(end:5)
-{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":5}},{"key_code":"z"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":13},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅡ(mo:9) + v -> ㄱ(end:1)
+{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":1}},{"key_code":"x"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅒ(mo:14) + v -> ㄹ(end:4)
+{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":4}},{"key_code":"w"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":14},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅖ(mo:13) + v -> ㅆ(end:77)
+{"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":77}},{"key_code":"2"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":13},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅣ(mo:10) + v -> ㅎ(end:10)
 {"type":"basic","from":{"key_code":"v"},"to":[{"set_variable":{"name":"end_state","value":10}},{"key_code":"1"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":10},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅚ(mo:221) + v -> ㅎ(end:10)
@@ -1268,6 +1281,12 @@
 
 
 
+// galma:1 + ㅡ(mo:9) + b -> ㄷ(end:3)
+{"type":"basic","from":{"key_code":"b"},"to":[{"set_variable":{"name":"end_state","value":3}},{"key_code":"a","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅒ(mo:14) + b -> ㅈ(end:9)
+{"type":"basic","from":{"key_code":"b"},"to":[{"set_variable":{"name":"end_state","value":9}},{"key_code":"1","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":14},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅖ(mo:13) + b -> ㅋ(end:111)
+{"type":"basic","from":{"key_code":"b"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":13},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // b -> ㅑ(mo:2) + galma:1
 {"type":"basic","from":{"key_code":"b"},"to":[{"set_variable":{"name":"galma_mode","value":1}},{"set_variable":{"name":"mo_state","value":2}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"6"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // Shift + b -> △
@@ -1278,14 +1297,14 @@
 
 
 
-// space -> galma:0 + cho,mo,end:0 + space
+// space -> galma:0 + cho:0,mo:0,end:0 + space
 {"type":"basic","from":{"key_code":"spacebar"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"spacebar"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
 
 
-// return -> galma:0 + cho,mo,end:0 + return
+// return -> galma:0 + cho:0,mo:0,end:0 + return
 {"type":"basic","from":{"key_code":"return_or_enter"},"to":[{"set_variable":{"name":"galma_mode","value":0}},{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"return_or_enter"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
@@ -1335,31 +1354,25 @@
 
 
 
-{"type":"basic","from":{"key_code":"1"},"to":[{"key_code":"m","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// (galma:0) + 2 -> 2
-{"type":"basic","from":{"key_code":"2"},"to":[{"key_code":"comma","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// (galma:0) + 3 -> 3
-{"type":"basic","from":{"key_code":"3"},"to":[{"key_code":"period","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-// (galma:0) + 4 -> 4
-{"type":"basic","from":{"key_code":"4"},"to":[{"key_code":"j","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"5"},"to":[{"key_code":"k","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"6"},"to":[{"key_code":"l","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"7"},"to":[{"key_code":"u","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"8"},"to":[{"key_code":"i","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"9"},"to":[{"key_code":"o","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"0"},"to":[{"key_code":"n","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"comma","modifiers":{"mandatory":["shift"]}},"to":[{"key_code":"y","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-{"type":"basic","from":{"key_code":"period","modifiers":{"mandatory":["shift"]}},"to":[{"key_code":"p","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"1"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"m","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"2"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"comma","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"3"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"period","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"4"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"j","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"5"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"k","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"6"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"l","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"7"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"u","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"8"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"i","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"9"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"o","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"0"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"n","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"comma","modifiers":{"mandatory":["shift"]}},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"y","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"period","modifiers":{"mandatory":["shift"]}},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"p","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
-{"type":"basic","from":{"key_code":"1","modifiers":{"mandatory":["shift"]}},"to":[{"key_code":"b","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-
-{"type":"basic","from":{"key_code":"quote"},"to":[{"key_code":"h","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-
-{"type":"basic","from":{"key_code":"semicolon"},"to":[{"key_code":"t","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
-
-{"type":"basic","from":{"key_code":"slash"},"to":[{"key_code":"g","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"1","modifiers":{"mandatory":["shift"]}},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"b","modifiers":"left_shift"}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"quote"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"h","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"semicolon"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"t","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+{"type":"basic","from":{"key_code":"slash"},"to":[{"set_variable":{"name":"cho_state","value":0}},{"set_variable":{"name":"mo_state","value":0}},{"set_variable":{"name":"end_state","value":0}},{"key_code":"g","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"hangul_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 
 
 
