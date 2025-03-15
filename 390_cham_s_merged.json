@@ -5,6 +5,107 @@
 
 
 
+   { // 한글입력, hangul_mode: 0 ; Simul. RightCommand + RightShift -> 390 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"390\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":0}
+     ]
+   },
+
+   { // 한글입력, hangul_mode: 1 ; Simul. RightCommand + RightShift -> 참3S 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"참3S\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":1}
+     ]
+   },
+
+   { // 한글입력, hangul_mode: 2 ; Simul. RightCommand + RightShift -> 두벌 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"두벌\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":2}
+     ]
+   },
+
+   { // 영어입력, hangul_mode: 0 ; Simul. RightCommand + RightShift -> 영어 / 390 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 390\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^en$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":0}
+     ]
+   },
+
+   { // 영어입력, hangul_mode: 1 ; Simul. RightCommand + RightShift -> 영어 / 참3S 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 참3S\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^en$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":1}
+     ]
+   },
+
+   { // 영어입력, hangul_mode: 2 ; Simul. RightCommand + RightShift -> 영어 / 두벌 출력
+     "type":"basic",
+     "parameters":{"basic.simultaneous_threshold_milliseconds":30},
+     "from": {"simultaneous":[
+       {"key_code":"right_command"},
+       {"key_code":"right_shift"}
+     ]},
+     "to":[
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 두벌\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language": "^en$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":2}
+     ]
+   },
+
+
+
+
+
+
    { // 한글입력, hangul_mode: 0 ; Simul. spacebar + RightCommand -> F19, 영어 / 390 출력
      "type":"basic",
      "parameters":{"basic.simultaneous_threshold_milliseconds":80},
