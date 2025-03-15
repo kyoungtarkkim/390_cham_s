@@ -767,6 +767,8 @@
 {"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":8},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + ㅑ(mo:2) + g -> ㅊ(end:999)
 {"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":999}},{"key_code":"z","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":2},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
+// galma:1 + ㅡ(mo:9) + g -> ㅍ(end:666)
+{"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":666}},{"key_code":"q","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"galma_mode","value":1},{"type":"variable_if","name":"mo_state","value":9},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // galma:1 + g -> ㅋ(end:111)
 // {"type":"basic","from":{"key_code":"g"},"to":[{"set_variable":{"name":"end_state","value":111}},{"key_code":"e","modifiers":["left_shift"]}],"conditions":[{"type":"variable_if","name":"galma_mode","value":1},{"type":"input_source_if","input_sources":[{"input_mode_id":"^com.apple.inputmethod.Korean.390Sebulshik$"}]}]},
 // cho:0 + g -> ㅗ(mo:22)
