@@ -7,12 +7,11 @@
 
    { // 한글입력, hangul_mode: 0 ; Simul. spacebar + RightCommand -> F19, 영어 / 390 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
        {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 390\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -23,15 +22,13 @@
      ]
    },
 
-
    { // 한글입력, hangul_mode: 1 ; Simul. spacebar + RightCommand -> f19, 영어 / 참3S 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
        {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 참3S\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -42,17 +39,15 @@
      ]
    },
 
-
    { // 한글입력, hangul_mode: 2 ; Simul. spacebar + RightCommand -> f19, 영어 / 두벌 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
-       {"key_code": "f19"},
+       {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 두벌\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
      ],
      "conditions":[
@@ -61,16 +56,13 @@
      ]
    },
 
-
-
    { // 영어입력, hangul_mode: 0 ; Simul. spacebar + RightCommand -> F19, 390 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
        {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"390\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -81,15 +73,13 @@
      ]
    },
 
-
    { // 영어입력, hangul_mode: 1 ; Simul. spacebar + RightCommand -> F19, 참3S 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
        {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"참3S\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -100,15 +90,13 @@
      ]
    },
 
-
    { // 영어입력, hangul_mode: 2 ; Simul. spacebar + RightCommand -> F19, 두벌 출력
      "type":"basic",
-     "from":{
-       "simultaneous":[
-         {"key_code":"spacebar"},
-         {"key_code":"right_command"}
-       ]
-     },
+     "parameters":{"basic.simultaneous_threshold_milliseconds":80},
+     "from": {"simultaneous":[
+       {"key_code":"spacebar"},
+       {"key_code":"right_command"}
+     ]},
      "to":[
        {"key_code":"f19"},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"두벌\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -118,6 +106,9 @@
        {"type":"variable_if","name":"hangul_mode","value":2}
      ]
    },
+
+
+
 
 
 
@@ -135,7 +126,6 @@
      ]
    },
 
-
    { // Emacs밖, 한글입력, hangul_mode:1 ; RightCommand -> f19, 영어 / 참3S 출력
      "type":"basic",
      "from":{"key_code":"right_command"},
@@ -149,7 +139,6 @@
        {"type":"variable_if","name":"hangul_mode","value":1}
      ]
    },
-
 
    { // Emacs밖, 한글입력, hangul_mode:2 ; RightCommand -> f19, 영어 / 두벌 출력
      "type":"basic",
@@ -165,8 +154,6 @@
      ]
    },
 
-
-
    { // Emacs밖, 영어입력, hangul_mode:0 ; RightCommand -> F19, 390 출력
      "type":"basic",
      "from":{"key_code":"right_command"},
@@ -180,7 +167,6 @@
        {"type":"variable_if","name":"hangul_mode","value":0}
      ]
    },
-
 
    { // Emacs밖, 영어입력, hangul_mode: 1 ; RightCommand -> F19, 참3S 출력
      "type":"basic",
@@ -196,7 +182,6 @@
      ]
    },
 
-
    { // Emacs밖, 영어입력, hangul_mode:2 ; RightCommand -> F19, 두벌 출력
      "type":"basic",
      "from":{"key_code":"right_command"},
@@ -211,8 +196,6 @@
      ]
    },
 
-
-
    { // Emacs안, 한글입력 ; RightCommand -> ABC직접변환, 외부입력기 영어 in EMACS출력
      "type":"basic",
      "from":{"key_code":"right_command"},
@@ -225,7 +208,6 @@
        {"type":"input_source_if","input_sources":[{"language":"^ko$"}]}
      ]
    },
-
 
    { // Emacs안, 영어입력 ; RightCommand -> LeftControl+\
      "type":"basic",
@@ -241,9 +223,50 @@
 
 
 
+
+
+   { // 한글입력, hangul_mode:0 ; RightOption + RightCommand -> hangul_mode:1, 참3S로 변경 출력
+     "type":"basic",
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
+     "to":[
+       {"set_variable":{"name":"hangul_mode","value":1}},
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"참3S로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":0}
+     ]
+   },
+
+   { // 한글입력, hangul_mode:1 ; RightOption + RightCommand -> hangul_mode:2, 두벌로 변경 출력
+     "type":"basic",
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
+     "to":[
+       {"set_variable":{"name":"hangul_mode","value":2}},
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"두벌로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":1}
+     ]
+   },
+
+   { // 한글입력, hangul_mode:2 ; RightOption + RightCommand -> hangul_mode:0, 390으로 변경 출력
+     "type":"basic",
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
+     "to":[
+       {"set_variable":{"name":"hangul_mode","value":0}},
+       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"390으로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
+     ],
+     "conditions":[
+       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
+       {"type":"variable_if","name":"hangul_mode","value":2}
+     ]
+   },
+
    { // 영어입력, hangul_mode:0 ; RightOption + RightCommand -> hangul_mode:1, 영어 / 참3S로 변경 출력
      "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
      "to":[
        {"set_variable":{"name":"hangul_mode","value":1}},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 참3S로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -254,10 +277,9 @@
      ]
    },
 
-
    { // 영어입력, hangul_mode: 1 ; RightOption + RightCommand -> hangul_mode: 2, 영어 / 두벌로 변경 출력
      "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
      "to":[
        {"set_variable":{"name":"hangul_mode","value":2}},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 두벌로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -268,10 +290,9 @@
      ]
    },
 
-
    { // 영어입력, hangul_mode:2 ; RightOption + RightCommand -> hangul_mode:0, 영어 / 390으로 변경 출력
      "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
+     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_shift"]}},
      "to":[
        {"set_variable":{"name":"hangul_mode","value":0}},
        {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"영어 / 390으로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
@@ -284,46 +305,6 @@
 
 
 
-   { // 한글입력, hangul_mode:0 ; RightOption + RightCommand -> hangul_mode:1, 참3S로 변경 출력
-     "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
-     "to":[
-       {"set_variable":{"name":"hangul_mode","value":1}},
-       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"참3S로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
-     ],
-     "conditions":[
-       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
-       {"type":"variable_if","name":"hangul_mode","value":0}
-     ]
-   },
-
-
-   { // 한글입력, hangul_mode:1 ; RightOption + RightCommand -> hangul_mode:2, 두벌로 변경 출력
-     "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
-     "to":[
-       {"set_variable":{"name":"hangul_mode","value":2}},
-       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"두벌로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
-     ],
-     "conditions":[
-       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
-       {"type":"variable_if","name":"hangul_mode","value":1}
-     ]
-   },
-
-
-   { // 한글입력, hangul_mode:2 ; RightOption + RightCommand -> hangul_mode:0, 390으로 변경 출력
-     "type":"basic",
-     "from":{"key_code":"right_command","modifiers":{"mandatory":["right_option"]}},
-     "to":[
-       {"set_variable":{"name":"hangul_mode","value":0}},
-       {"shell_command":"/opt/homebrew/bin/hs -c 'hs.alert.show(\"390으로 변경\",{fillColor={red=0,green=0,blue=0,alpha=0.3},textSize=50,radius=10},hs.screen.mainScreen(),0.3)'"}
-     ],
-     "conditions":[
-       {"type":"input_source_if","input_sources":[{"language":"^ko$"}]},
-       {"type":"variable_if","name":"hangul_mode","value":2}
-     ]
-   },
 
 
 
